@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .check {
+        fill: none;
+        stroke: #356B35;
+        stroke-width: 10;
+        stroke-dasharray: 0 200;
+        animation: animateCheck 500ms linear 800ms both;
+      }
+
+      .circle,
+      .circle-back {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke-width: 10;
+        stroke-linecap: square;
+        stroke-miterlimit: 10;
+      }
+
+      .circle {
+        position: relative;
+        stroke: #356B35;
+        stroke-dashoffset: -180;
+        stroke-dasharray: 0, 440;
+        animation: animate 900ms linear both;
+        transform-origin: center;
+      }
+
+      .circle-back {
+        stroke: #488E48;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 440;
+      }
+
+      svg {
+        position: relative;
+        height: 140px;
+        width: 140px;
+      }
+
+      @keyframes animateCheck {
+        0% {
+          stroke-dasharray: 0 100;
+        }
+
+        100% {
+          stroke-dasharray: 180 100;
+        }
+      }
+
+      @keyframes animate {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        12.5% {
+          transform: rotate(-20deg);
+          stroke-dasharray: 40, 440;
+        }
+
+        25% {
+          transform: rotate(-40deg);
+        }
+
+        50% {
+          transform: rotate(-135deg);
+          stroke-dasharray: 100, 440;
+          stroke-dashoffset: -20;
+        }
+
+        75% {
+          transform: rotate(-180deg);
+          stroke-dasharray: 20, 440;
+          stroke-dashoffset: -10;
+        }
+
+        95% {
+          transform: rotate(-170deg);
+          stroke-dasharray: 0, 440;
+          stroke-dashoffset: 0;
+        }
+
+        100% {
+          transform: rotate(-180deg);
+          stroke-dasharray: 440;
+          stroke-dashoffset: 440;
+        }
+
+
+      }
+    </style>
+  </defs>
+  <!-- <circle class="circle" cx="70" cy="70" r="65" fill="none" />
+  <polyline class="check" points="30,75 50,80 110,50 " /> -->
+  <circle class="circle-back" cx="70" cy="70" r="61.3" />
+  <circle class="circle" cx="70" cy="70" r="61.3" />
+  <polyline class="check" points="38.1,70.5 59.5,91.2 101.9,48.8 " />
+
+</svg>
